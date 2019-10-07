@@ -1,0 +1,28 @@
+.head {
+    text-align: center;
+    color: lightgrey;
+    background-color: black;
+}
+.container {
+    margin: auto;
+    width: 60%;
+    flex: 30%;
+    display: flex;
+}
+.image {
+    flex: 50%;
+}
+.history {
+    flex: 50%;
+}
+#bunny {
+    width: 500px;
+    height: 500px;
+}
+.history {
+    color: black;
+    text-align: left;
+    text-shadow: 3px 2px lightsteelblue;
+    text-decoration: underline;
+    text-decoration-color: lightgray;
+}
