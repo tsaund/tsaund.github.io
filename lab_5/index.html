@@ -281,6 +281,15 @@
     console.log("List of countries in the world", countries);
     sessionStorage.setItem('countries_arr', JSON.stringify(countries));
 
+    function checkUnique(ran, check){
+      for(let i = 0; i<check.length; i += 1){
+        if(ran = check[i]){
+          return false;
+        }
+      }
+      return true;
+    }
+
     function clickMe() {
       const json = sessionStorage.getItem('countries_arr');
       const list = JSON.parse(json);
@@ -290,9 +299,15 @@
 
       const instructions = document.querySelector('.instructions');
       instructions.innerHTML = '';
+      const selectNumber;
+      const uniqueIndex = [];
 
       for(let i = 0; i < 50; i += 1){
-        const selectNumber = Math.random * 243;
+
+        do{
+          selectNumber = Math.random * 243;
+        }while(checkUnique(selectNumber, uniqueIndex));
+        uniqueIndex.push(selectNumber);
         let el = document.createElement("li");
         el.innerText = nameArray[selectNumber];
         instructions.appendChild(el);
