@@ -13,7 +13,7 @@
       <!-- <button class="button" onclick="loadData()">Load Some JSON</button> -->
       <button class="button" onclick=clickMe()>Click me to replace list entries</button>
       <div class="content">
-        <ul class="instructions">
+        <ol class="instructions">
           <li>Delete and re-clone the class repository</li>
           <li>Open <span class="code">lab_5_json.html</span> in your browser</li>
           <li>Open your developer tools and look at the logged data</li>
@@ -286,14 +286,12 @@
       const list = JSON.parse(json);
       const element = document.querySelector('.instructions');
 
-      // const htmlArray = list.map((i) => {
+      const nameArray = list.map((i) => i.name);
 
-      // });
-
-      const names = [];
-      for(let i = 0; i < 50; i += 1){
-        names[i] = list[Math.random() * (242)].name;
-      }
+      // const names = [];
+      // for(let i = 0; i < 50; i += 1){
+      //   names[i] = list[Math.random() * (242)].name;
+      // }
 
       //countries = names;
     }
