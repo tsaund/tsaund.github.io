@@ -284,10 +284,10 @@
     function checkUnique(ran, check){
       for(let i = 0; i<check.length; i += 1){
         if(ran = check[i]){
-          return false;
+          return true;
         }
       }
-      return true;
+      return false;
     }
 
     function getRandomIntInclusive(min, max) {
