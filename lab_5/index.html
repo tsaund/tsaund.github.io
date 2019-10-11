@@ -288,12 +288,15 @@
 
       const nameArray = list.map((i) => i.name);
 
-      // const names = [];
-      // for(let i = 0; i < 50; i += 1){
-      //   names[i] = list[Math.random() * (242)].name;
-      // }
+      const instructions = document.querySelector('.instructions');
+      instructions.innerHTML = '';
 
-      //countries = names;
+      for(let i = 0; i < 50; i += 1){
+        const selectNumber = Math.random * 243;
+        let el = document.createElement("li");
+        el.innerText = nameArray(selectNumber);
+        instructions.appendChild(el);
+      }
     }
   </script>
 </body>
