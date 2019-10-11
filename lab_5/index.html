@@ -290,6 +290,12 @@
       return true;
     }
 
+    function getRandomIntInclusive(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive 
+    }
+
     function clickMe() {
       const json = sessionStorage.getItem('countries_arr');
       const list = JSON.parse(json);
@@ -305,9 +311,10 @@
       for(let i = 0; i < 50; i += 1){
 
         do{
-          selectNumber = Math.random * 243;
+          selectNumber = getRandomIntInclusive(0, 242);
         }while(checkUnique(selectNumber, uniqueIndex));
         uniqueIndex.push(selectNumber);
+
         let el = document.createElement("li");
         el.innerText = nameArray[selectNumber];
         instructions.appendChild(el);
