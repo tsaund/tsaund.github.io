@@ -305,13 +305,12 @@
 
       const instructions = document.querySelector('.instructions');
       instructions.innerHTML = '';
-      const selectNumber;
       const uniqueIndex = [];
 
       for(let i = 0; i < 50; i += 1){
 
         do{
-          selectNumber = getRandomIntInclusive(0, 242);
+          const selectNumber = getRandomIntInclusive(0, 242);
         }while(checkUnique(selectNumber, uniqueIndex));
         uniqueIndex.push(selectNumber);
 
