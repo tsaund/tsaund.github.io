@@ -306,11 +306,12 @@
       const instructions = document.querySelector('.instructions');
       instructions.innerHTML = '';
       const uniqueIndex = [];
+      const selectNumber = 0;
 
       for(let i = 0; i < 50; i += 1){
 
         do{
-          const selectNumber = getRandomIntInclusive(0, 242);
+          selectNumber = getRandomIntInclusive(0, 242);
         }while(checkUnique(selectNumber, uniqueIndex));
         uniqueIndex.push(selectNumber);
 
