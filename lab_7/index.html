@@ -24,21 +24,19 @@
           return res;
         })
         .then(res => res.map(c => c))
-        .then(res => {
-          console.log(res);
-          return res;
-        })
         .then(res => res.map(c => (c.route_id+" "+c.title)))
         .then(data => document.querySelector(".content").innerText = data)
         .then(data => {
           for(let i = 0; i < data.length; i += 1){
-            console.log(data[i]);
             if(data[i] == "108 108 Adelphi"){
-              console.log(data[i].title);
               document.querySelector(".header").innerText += " "+data[i];
               return data;
             }
           }
+        })
+        .then(res => {
+          console.log(res);
+          return res;
         });
     }
 
